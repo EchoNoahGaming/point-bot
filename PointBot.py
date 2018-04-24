@@ -3,7 +3,7 @@ from discord.ext import commands
 import random
 import asyncio
 
-description = '''PointBot. Just a test.'''
+description = '''PointBot!'''
 bot = commands.Bot(command_prefix='-', description=description)
 points = 0
 with open("pointdata.txt", "r") as file:
@@ -44,7 +44,7 @@ async def resetpoints():
     global points
     points +=1
     with open("pointdata.txt", "w") as file:
-        file.write(points)
+        file.write(str(points))
     await bot.say('The points have been reset.')
     
-bot.run('NDM3NzU5MTUwNTg4NDI4Mjg4.Db69xQ.aCkc0P03TNoT8kRAlHyAyrHYDiA')
+bot.run('token')
